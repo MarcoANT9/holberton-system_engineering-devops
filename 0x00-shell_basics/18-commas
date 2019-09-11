@@ -1,3 +1,3 @@
 #!/bin/bash
-echo -e "$(ls -1ap --format=commas)\n" 
+echo -e "$(ls -map)\n" 
 
