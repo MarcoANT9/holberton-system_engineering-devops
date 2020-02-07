@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#This script displays the contents of the file /etc/passwd
+
+target=/etc/passwd
+

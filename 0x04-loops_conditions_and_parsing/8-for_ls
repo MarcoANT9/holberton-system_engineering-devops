@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script displays the simple name of the files in a directory
+for dir in ./*
+do
+    dir="$(basename $dir)"
+
+    echo "$dir" | cut -d"-" -f2
+
+done
