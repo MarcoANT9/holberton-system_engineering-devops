@@ -2,7 +2,7 @@
 # This script displays the simple name of the files in a directory
 for dir in ./*
 do
-    dir="$(basename $dir)"
+    dir="$(basename "$dir")"
 
     echo "$dir" | cut -d"-" -f2
 
