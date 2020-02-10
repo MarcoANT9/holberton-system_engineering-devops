@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script creates an infinite loop
+counter=0
+while [ $counter -lt 10 ]
+do
+    echo "To infinity and beyond"
+    trap "echo I am invincible!!!" SIGTERM
+    sleep 2
+done
