@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # This script displays all lines containing "bash" in the processes list.
-list=$(pidof bash)
+list=$(pgrep bash)
 for p in $list
 do
     echo "$p bash"
