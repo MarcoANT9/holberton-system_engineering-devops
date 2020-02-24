@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script kills the "4-to_infinity_and_beyond" process
+p=$(pgrep -f 100-process_and_pid_file)
+kill -9 "$p"
