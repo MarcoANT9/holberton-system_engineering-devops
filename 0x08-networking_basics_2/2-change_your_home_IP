@@ -2,5 +2,5 @@
 # This program changes the IPv4 of the local machine and facebook
 cp /etc/hosts ~/hosts.new
 sed -i 's/127.0.0.1/127.0.0.2/g' ~/hosts.new
-echo -e "\n8.8.8.8\tfacebook.com "
+echo -e "\n8.8.8.8\tfacebook.com " >> ~/host.new
 cp -f ~/hosts.new /etc/hosts
