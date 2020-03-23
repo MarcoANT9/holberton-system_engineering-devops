@@ -1,4 +1,4 @@
-# This manifest kills the process 'Killmenow'
+# This manifest kills the process 'Killmenow' using the command 'pkill'
 
 exec { 'Killmenow':
 
