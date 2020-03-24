@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script creates a key pair with format rsa, size 4096, named holberton and
+# password betty
+ssh-keygen -t rsa -b 4096 -F holberton -N betty
