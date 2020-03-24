@@ -16,7 +16,7 @@ Requirements:
 
 	     -- The IP of the server we want to transfer the file to
 
-             -- The username scp connects with
+	     -- The username scp connects with
 
 	     -- The path to the SSH private key that scp uses
 
