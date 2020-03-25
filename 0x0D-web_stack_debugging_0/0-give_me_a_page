@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script restarts apache2 in a machine
+sudo /etc/init.d/apache2 restart
