@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script adds a custom http response header for the two servers at
+# Holberton
+add_header X-Served-By $hostname
