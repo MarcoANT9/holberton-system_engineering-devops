@@ -3,13 +3,13 @@
 # nginx listens to port 80
 # Returns a page containing "Holberton School" when querying at its root
 
-sudo apt-get update
+sudo apt-get update &&
 
 sudo apt-get -y install nginx
 
 #For the firewall
 sudo ufw allow 'Nginx HTTP'
 
-echo 'Holberton School' > /var/www/html/index.nginx-debian.html
+echo 'Holberton School for the win!' > /var/www/html/index.nginx-debian.html &&
 
 sudo /etc/init.d/nginx start
