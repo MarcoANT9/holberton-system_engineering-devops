@@ -1,4 +1,32 @@
 #!/usr/bin/env bash
-# This script adds a custom http response header for the two servers at
-# Holberton
-add_header X-Served-By $hostname
+# This script redirects to another page
+# nginx listens to port 80
+# Returns a page with the error 404
+
+sudo apt-get update
+
+sudo apt-get -y install nginx
+
+#For the firewall
+sudo ufw allow 'Nginx HTTP'
+
+echo 'Holberton School for the win!' > /var/www/html/index.nginx-debian.html
+
+echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
+
+printf %s "server {
+    listen 80;
+    listen [::]:80 default_server;
+    root   /var/www/html;
+    index index.html index.htm index.nginx-debian.html;
+    location /redirect_me {
+        return 301 https://www.youtube.com/watch?v=vgiDcJi534Y;
+    }
+    error_page 404 /404.html;
+    location = /404.html {
+        internal;
+    }
+    add_header X-Served-By $HOSTNAME;
+}" > /etc/nginx/sites-available/default
+
+sudo /etc/init.d/nginx restart
