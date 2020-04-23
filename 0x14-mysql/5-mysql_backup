@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script creates a backup for the dabatases in the server 1.
+# It accepts 1 parameter: The password to access mysql.
+
+mysqldump -uroot -p"$1" --all-databases > backup.sql
+date = $(date +%d-%m-%y)
+tar -czf $date.tar.gz backup.sql
