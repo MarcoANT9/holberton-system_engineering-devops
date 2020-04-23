@@ -3,5 +3,4 @@
 # It accepts 1 parameter: The password to access mysql.
 
 mysqldump -uroot -p"$1" --all-databases > backup.sql
-date = $(date +%d-%m-%y)
-tar -czvf $date.tar.gz backup.sql
+tar czvf "$(date +'%d-%m-%Y').tar.gz" backup.sql
