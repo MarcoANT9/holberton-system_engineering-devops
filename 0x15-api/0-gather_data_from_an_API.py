@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""This module will search info from an API and print in the STDOUT the
+information about the user and their current tasks.      """
 import requests
 import sys
 import json
