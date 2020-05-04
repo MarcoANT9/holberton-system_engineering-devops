@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """This module will read the information from an API about a specific user and
 export the information about their tasks into a CSV file.                  """
+import csv
+import json
 import requests
 import sys
-import json
-import csv
 
 
 if __name__ == '__main__':
