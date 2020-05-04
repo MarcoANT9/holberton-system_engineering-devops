@@ -8,11 +8,11 @@ A Python script that, using a REST API, for a given employee ID, returns informa
 
 Specifications:
 
-	requests module is used.
+	Requests module is used.
 	The script accepts an integer as a parameter, which is the employee ID
 	The script displays on the standard output the employee TODO list progress in this exact format:
 	First line: "Employee EMPLOYEE_NAME is done with tasks(NUMBER_OF_DONE_TASKS/TOTAL_NUMBER_OF_TASKS):"
-              EMPLOYEE_NAME: name of the employee
+	      EMPLOYEE_NAME: name of the employee
 	      NUMBER_OF_DONE_TASKS: number of completed tasks
 	      TOTAL_NUMBER_OF_TASKS: total number of tasks, which is the sum of completed and non-completed tasks
 	Second and N next lines display the title of completed tasks: Tab TASK_TITLE (with 1 tabulation + 1 space before)
