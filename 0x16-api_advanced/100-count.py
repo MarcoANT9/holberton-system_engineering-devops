@@ -40,6 +40,22 @@ def count_words(subreddit, word_list, key_list={}, after='', sorted_list=[]):
             mini_list = (key, key_list[key])
             sorted_list.append(mini_list)
         sorted_list = sorted(sorted_list, key=itemgetter(1), reverse=True)
+        first_index = 0
+        last_index = len(sorted_list) - 1
+        sorting = 0
+        while (first_index < last_index):
+            if sorted_list[first_index][1] != sorted_list[last_index][1]:
+                first_index += 1
+                last_index -= 1
+            else:
+                sorting = 1
+                break
+        if sorting == 1:
+            sorted_list = (sorted_list[0:first_index] +
+                           sorted(sorted_list[first_index:last_index],
+                                  key=itemgetter(0)) +
+                           sorted_list[last_index:])
+
         for elements in sorted_list:
             if elements[1] != 0:
                 print("{}: {}".format(elements[0], elements[1]))
