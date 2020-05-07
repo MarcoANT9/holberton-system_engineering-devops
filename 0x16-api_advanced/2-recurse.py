@@ -16,9 +16,9 @@ def recurse(subreddit, hot_list=[], after=''):
     if str(response) != '<Response [200]>':
         return None
     response_json = response.json()
-    posts = response.json()['data']['dist'] # Number of posts on page
+    posts = response.json()['data']['dist']  # Number of posts on page
     index = 0
-    info = response_json['data']['children'] # Dict of posts
+    info = response_json['data']['children']  # Dict of posts
     while index < posts:
         data = info[index]['data']['title']
         hot_list.append(data)
